@@ -1,12 +1,13 @@
+import datetime
 import random
 import time
-
 from airflow.decorators import dag
 from airflow.operators.python import PythonOperator
 
 
 @dag(
     dag_id="fast_stupid",
+    start_date=datetime.datetime(2023, 9, 6),
     schedule="@once",
 )
 def fast_stupid():
