@@ -26,3 +26,6 @@ def fast_stupid():
             if prev:
                 prev >> op
             prev = op
+
+
+fast_stupid()
