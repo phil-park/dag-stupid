@@ -7,7 +7,7 @@ from airflow.operators.python import PythonOperator
 
 @dag(
     dag_id="fast_stupid",
-    schedule="manual",
+    schedule="@once",
 )
 def fast_stupid():
     width = 256
