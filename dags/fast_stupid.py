@@ -1,5 +1,4 @@
 import datetime
-import random
 import time
 from airflow.decorators import dag
 from airflow.operators.python import PythonOperator
@@ -15,7 +14,7 @@ def fast_fail():
     height = 16
 
     def _sleep():
-        time.sleep(random.randint(1, 4))
+        time.sleep(30)
 
     for i in range(width):
         prev = None
