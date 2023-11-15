@@ -6,11 +6,11 @@ from airflow.operators.python import PythonOperator
 
 
 @dag(
-    dag_id="fast_stupid",
+    dag_id="fast_fail",
     start_date=datetime.datetime(2023, 9, 6),
     schedule="@once",
 )
-def fast_stupid():
+def fast_fail():
     width = 256
     height = 16
 
@@ -29,4 +29,4 @@ def fast_stupid():
             prev = op
 
 
-fast_stupid()
+fast_fail()
